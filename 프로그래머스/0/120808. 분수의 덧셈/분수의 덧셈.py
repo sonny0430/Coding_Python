@@ -11,4 +11,4 @@ def solution(numer1, denom1, numer2, denom2):
             i = i+1
 
     return [int(mul_numer/max(common_mulple)), int(mul_denom/max(common_mulple))]
-        
+# keyword = 최대 공배수
