@@ -10,3 +10,5 @@ def solution(array):
         return no_duplication_array[count_list.index(max(count_list))]
     else:
         return -1
+    
+# 딕셔너리 활용법, enumerate 활용법도 찾아보면 좋아보자
