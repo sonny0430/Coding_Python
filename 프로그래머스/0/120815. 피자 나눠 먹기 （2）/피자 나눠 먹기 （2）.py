@@ -5,7 +5,6 @@ def solution(n):
             break
         else:
             a = n * i
-        print(i)
     return a // 6
 
     # 최소공배수
