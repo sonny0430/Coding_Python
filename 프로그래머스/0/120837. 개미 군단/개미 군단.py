@@ -14,3 +14,5 @@ def solution(hp):
         else:
             break
     return result
+
+# if문 안써도 되는 문제.. 다시 풀어볼 것
