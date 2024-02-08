@@ -8,6 +8,5 @@ def solution(s):
             result -= int(pre_data)
         else:
             result += int(i)
-        pre_data = i
-        
+        pre_data = i        
     return result
