@@ -11,3 +11,7 @@ def solution(my_string, s, e):
             result.append(my_string[i])
 
     return ''.join(result)
+
+# 헉
+#def solution(my_string, s, e):
+#    return my_string[:s] + my_string[s: e + 1][::-1] + my_string[e + 1:]
