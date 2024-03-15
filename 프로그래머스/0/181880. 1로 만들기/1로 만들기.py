@@ -16,3 +16,8 @@ def solution(num_list):
                 temp = temp // 2
         cnt = 0
     return sum(result)
+
+#    for n in num_list:
+#        while n != 1:
+#            n //= 2
+#            answer += 1
