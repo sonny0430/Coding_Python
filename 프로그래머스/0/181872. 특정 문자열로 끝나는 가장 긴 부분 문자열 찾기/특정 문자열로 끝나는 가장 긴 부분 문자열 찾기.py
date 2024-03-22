@@ -12,3 +12,9 @@ def solution(myString, pat):
             result.append(tmp[i])
 
     return list(sorted(result, key = lambda x: len(x), reverse=True))[0]
+
+
+
+# rfind() 알아두기
+#def solution(myString, pat):
+#    return myString[0:myString.rfind(pat)] + pat
