@@ -20,3 +20,9 @@ def solution(numlist, n):
             result.append(j)
     
     return [p+n for p in result]
+
+
+# sorted 활용문제
+#def solution(numlist, n):
+#    answer = sorted(numlist,key = lambda x : (abs(x-n), n-x))
+#    return answer
