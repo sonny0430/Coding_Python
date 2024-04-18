@@ -21,3 +21,9 @@ def solution(bin1, bin2):
     print(result)
 
     return bin(result)[2:]
+
+
+# 2진수 연산 바로 하는 법
+#def solution(bin1, bin2):
+#    answer = bin(int(bin1,2) + int(bin2,2))[2:]
+#    return answer
