@@ -79,3 +79,43 @@ def solution(data):
     return sum([int(s) if s.isdigit() == True else 0 for s in data])
 ```
 
+# 문제 7번
+
+* 문제 레벨 : 0
+* 문제 종류 : 정렬
+* 문제 링크 : https://100.pyalgo.co.kr/?page=7
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    result = []
+    temp = [data[i][1] for i in range(len(data))]    
+    
+    for j in sorted(temp):
+        for k in range(len(data)):
+            if j in data[k]:
+                result.append(data[k][0])
+    
+    return result
+```
+
+# 문제 8번
+
+* 문제 레벨 : 0
+* 문제 종류 : 정렬
+* 문제 링크 : https://100.pyalgo.co.kr/?page=8
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    result = []
+    temp = 100
+
+    for i in range(len(data)-1):
+        if temp > (data[i+1] - data[i]):
+            temp = (data[i+1] - data[i])
+            result = [data[i], data[i+1]]
+
+    return result
+```
+
