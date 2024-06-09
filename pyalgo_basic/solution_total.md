@@ -146,3 +146,17 @@ def solution(data):
     return sorted(result)
 ```
 
+# 문제 11번
+
+* 문제 레벨 : 0
+* 문제 종류 : 정렬
+* 문제 링크 : https://100.pyalgo.co.kr/?page=11
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    result = [sum(i)//3 for i in data]
+        
+    return len(list(filter(lambda x: x >= 80, result)))
+```
+
