@@ -61,9 +61,8 @@ def solution(data):
 
 ```python
 def solution(data):
-    result = 0
-    for i in data:
-        result += str(i).count('1')
+    result = sum([str(i).count('1') for i in data])
+    
     return (0 if len(data) == 0 else result)
 ```
 
@@ -117,5 +116,33 @@ def solution(data):
             result = [data[i], data[i+1]]
 
     return result
+```
+
+# 문제 9번
+
+* 문제 레벨 : 0
+* 문제 종류 : 정렬
+* 문제 링크 : https://100.pyalgo.co.kr/?page=9
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    result = [i['수'] for i in data]
+        
+    return data[result.index(max(result))]['이름']    
+```
+
+# 문제 10번
+
+* 문제 레벨 : 0
+* 문제 종류 : 정렬
+* 문제 링크 : https://100.pyalgo.co.kr/?page=10
+* 통과 여부 : Y
+
+```python
+def solution(data):        
+    result = [i[0] for i in data if sum(i[1:])>=350]  
+             
+    return sorted(result)
 ```
 
