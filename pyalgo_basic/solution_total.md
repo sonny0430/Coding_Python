@@ -160,3 +160,54 @@ def solution(data):
     return len(list(filter(lambda x: x >= 80, result)))
 ```
 
+# 문제 13번
+
+* 문제 레벨 : 0
+* 문제 종류 : 정렬
+* 문제 링크 : https://100.pyalgo.co.kr/?page=13
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    temp = sorted(data[1].items(), key = lambda x: (x[1], x[0]))
+    return [temp[i][0] for i in range(len(temp))]
+
+```
+
+# 문제 14번
+
+* 문제 레벨 : 0
+* 문제 종류 : 정렬
+* 문제 링크 : https://100.pyalgo.co.kr/?page=14
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    temp = sorted(data.items(), key = lambda x: x[0])
+    return [temp[i][1] for i in range(len(temp))]
+```
+
+
+# 문제 16번
+
+* 문제 레벨 : 0
+* 문제 종류 : 정렬
+* 문제 링크 : https://100.pyalgo.co.kr/?page=16
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    result = []
+    for s in data:
+        if '-' in s:
+            result.append(s[-4:]+'/'+s[3:5]+'/'+s[:2])
+        elif '/' in s:
+            result.append(s[-4:]+'/'+s[:5])
+        elif '.' in s:
+            result.append(s.replace('.', '/'))
+        else:
+            None
+        
+    return sorted(result)
+```
+
