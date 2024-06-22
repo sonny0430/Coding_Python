@@ -194,6 +194,7 @@ def solution(data):
 def solution(data):
     temp = sorted(data[1].items(), key = lambda x: (x[1], x[0]))
     return [temp[i][0] for i in range(len(temp))]
+
 ```
 
 # 문제 14번
@@ -347,6 +348,7 @@ def solution(data):
 ```python
 def solution(data):
     return (data[0].index(data[1]) if data[1] in data[0] else False)
+
 ```
 
 # 문제 22번
@@ -359,6 +361,7 @@ def solution(data):
 ```python
 def solution(data):
     return (data[0].index(data[1]) if data[1] in data[0] else False)
+
 ```
 
 # 문제 23번
@@ -374,5 +377,59 @@ def solution(data):
         if data[1] in i:
             return True
     return False
+```
+
+# 문제 26번
+
+* 문제 레벨 : 0
+* 문제 종류 : 탐색, 슬라이딩 윈도우
+* 문제 링크 : https://100.pyalgo.co.kr/?page=26
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    result = 0
+    n = data[1]
+    
+    for i in range(len(data[0])-n):
+        if sum(data[0][i:i+n]) > result:
+            result = sum(data[0][i:i+n])
+
+    return result
+```
+
+# 문제 27번
+
+* 문제 레벨 : 1
+* 문제 종류 : 탐색, 슬라이딩 윈도우
+* 문제 링크 : https://100.pyalgo.co.kr/?page=27
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    for win in range(2, len(data[0])):
+      for i in range(0, len(data[0])-win):
+        if sum(data[0][i:i+win+1]) > data[1]:
+            return win
+  
+    return 0
+```
+
+# 문제 28번
+
+* 문제 레벨 : 1
+* 문제 종류 : 탐색, 투 포인터
+* 문제 링크 : https://100.pyalgo.co.kr/?page=28
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    result = []
+    
+    for i in range(len(data[0])-1):
+        for j in range(i+1, len(data[0])):
+            result.append(data[0][i] + data[0][j])
+   
+    return list(sorted(result, key = lambda x: abs(x - data[1])))[0]
 ```
 
