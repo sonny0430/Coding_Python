@@ -433,3 +433,55 @@ def solution(data):
     return list(sorted(result, key = lambda x: abs(x - data[1])))[0]
 ```
 
+# 문제 29번
+
+* 문제 레벨 : 0
+* 문제 종류 : 비트 조작
+* 문제 링크 : https://100.pyalgo.co.kr/?page=29
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    for i in data:
+        if data.count(i) == 1:
+            return i
+```
+
+# 문제 30번
+
+* 문제 레벨 : 0
+* 문제 종류 : 비트 조작
+* 문제 링크 : https://100.pyalgo.co.kr/?page=30
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    result = ''
+    for s in bin(data)[2:]:
+        if s == "1":
+            result += "A"
+        else:
+            result += "B"     
+    return result
+```
+
+# 문제 31번
+
+* 문제 레벨 : 0
+* 문제 종류 : 비트 조작
+* 문제 링크 : https://100.pyalgo.co.kr/?page=31
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    temp = bin(data)[2:]
+    
+    while len(temp) < 10:
+        temp = '0' + temp
+    
+    temp = temp.replace('1', '2').replace('0', '1').replace('2', '0')
+    
+    temp = int(temp, 2)
+    return temp
+```
+
