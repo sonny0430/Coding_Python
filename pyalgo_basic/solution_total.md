@@ -485,3 +485,33 @@ def solution(data):
     return temp
 ```
 
+# 문제 41번
+
+* 문제 레벨 : 0
+* 문제 종류 : 정규표현식
+* 문제 링크 : https://100.pyalgo.co.kr/?page=41
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    dict = {'{' : '}',
+            '}' : '{',
+            '[' : ']',
+            ']' : '[',
+            '(' : ')',
+            ')' : '('}
+    
+    gwal_f = []
+    gwal_b = []
+    
+    for s in data[0:len(data)//2]:
+        gwal_f.append(s)
+        gwal_b.insert(0,dict[s])
+    
+    result = ''.join(gwal_f) + ''.join(gwal_b)
+    
+    if data == result:
+        return True
+    else:
+        return False
+```
