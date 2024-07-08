@@ -194,7 +194,6 @@ def solution(data):
 def solution(data):
     temp = sorted(data[1].items(), key = lambda x: (x[1], x[0]))
     return [temp[i][0] for i in range(len(temp))]
-
 ```
 
 # 문제 14번
@@ -348,7 +347,6 @@ def solution(data):
 ```python
 def solution(data):
     return (data[0].index(data[1]) if data[1] in data[0] else False)
-
 ```
 
 # 문제 22번
@@ -361,7 +359,6 @@ def solution(data):
 ```python
 def solution(data):
     return (data[0].index(data[1]) if data[1] in data[0] else False)
-
 ```
 
 # 문제 23번
@@ -394,7 +391,9 @@ def solution(data):
     for i in range(len(data[0])-n):
         if sum(data[0][i:i+n]) > result:
             result = sum(data[0][i:i+n])
-
+        else:
+            None
+    
     return result
 ```
 
@@ -485,6 +484,26 @@ def solution(data):
     return temp
 ```
 
+# 문제 32번
+
+* 문제 레벨 : 0
+* 문제 종류 : 비트 조작
+* 문제 링크 : https://100.pyalgo.co.kr/?page=32
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    bit_and = data[0]
+    bit_or = data[0]
+    
+    for i in range(1, len(data)):
+        bit_and &= data[i]
+        bit_or |= data[i]
+    
+    return (bit_and, bit_or)
+    
+```
+
 # 문제 41번
 
 * 문제 레벨 : 0
@@ -515,3 +534,83 @@ def solution(data):
     else:
         return False
 ```
+
+# 문제 42번
+
+* 문제 레벨 : 0
+* 문제 종류 : 데이터 구조
+* 문제 링크 : https://100.pyalgo.co.kr/?page=42
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    result = []
+    for i in data['requests']:
+        if len(result) == data['size']:
+            result.pop(0)
+            result.append(i)
+        else:
+            result.append(i)
+
+    return result   
+```
+
+# 문제 43번
+
+* 문제 레벨 : 0
+* 문제 종류 : 데이터 구조
+* 문제 링크 : https://100.pyalgo.co.kr/?page=43
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    result = []
+    
+    for i in data['pages']:
+        if i in result:
+            result.remove(i)
+            result.append(i)
+            
+        elif len(result) == data['size']:
+            result.pop(0)
+            result.append(i)
+            
+        else:
+            result.append(i)
+        
+    return result
+```
+
+# 문제 44번
+
+* 문제 레벨 : 0
+* 문제 종류 : 데이터 구조
+* 문제 링크 : https://100.pyalgo.co.kr/?page=44
+* 통과 여부 : Y
+
+```python
+def solution(data):
+    data = data.lower().replace(',','').split(' ')
+    result = {}
+    for s in data:
+        if s not in result.keys():
+            result[s] = 1
+        else:
+            result[s] += 1
+    
+    return result
+```
+
+# 문제 45번
+
+* 문제 레벨 : 0
+* 문제 종류 : 데이터 구조
+* 문제 링크 : https://100.pyalgo.co.kr/?page=45
+* 통과 여부 : N
+
+```python
+def solution(data):
+    return data
+
+```
+
